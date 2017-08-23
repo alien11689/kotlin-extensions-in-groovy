@@ -6,9 +6,7 @@ class ExtensionsTest extends Specification {
 
     def "should use extension method"() {
         expect:
-            use(StringExtenstionsKt) {
-                input.skipFirst(n) == expected
-            }
+            input.skipFirst(n) == expected
         where:
             input  | n | expected
             "abcd" | 3 | "d"
@@ -16,10 +14,8 @@ class ExtensionsTest extends Specification {
             ""     | 3 | ""
     }
 
-def "should use extension property"() {
-    expect:
-        use(StringExtenstionsKt) {
+    def "should use extension property"() {
+        expect:
             "abcd".answer == 42
-        }
-}
+    }
 }
